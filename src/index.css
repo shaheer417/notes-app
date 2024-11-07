@@ -1,0 +1,168 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.header {
+  background-color: aquamarine;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: solid black;
+}
+
+.notes {
+  display: flex;
+  justify-content: center; /* Centers the notes container horizontally */
+  align-items: center; /* Centers the notes container vertically (if needed) */
+  padding: 20px;
+  background-color: #66ff99;
+  margin-top: 20%;
+}
+
+/* Styling for each note section */
+.sections {
+  width: 100%; /* Makes sections fill available width */
+  max-width: 400px; /* Limits the width of the notes container */
+  background-color: #66ff66; /* Slightly darker green background for sections */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Each section within the notes */
+.sections section {
+  background-color: #3fb74c; /* Green color for each note section */
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px; /* Space between each note */
+  position: relative; /* Relative position for the button */
+}
+
+/* Heading styling */
+.sections section h2 {
+  margin: 0 0 10px; /* Space between title and paragraph */
+  font-size: 1.2em; /* Adjust font size */
+  color: white; /* White text for title */
+}
+
+/* Paragraph styling */
+.sections section p {
+  margin: 0;
+  font-size: 1em;
+  color: white; /* White text for description */
+}
+
+/* Button to remove note */
+.sections section button {
+  position: absolute; /* Position the button inside the note section */
+  top: 10px;
+  right: 10px; /* Aligns the button to the top-right corner */
+  background-color: #ff6666; /* Red background for delete button */
+  color: white; /* White text for the button */
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sections section button:hover {
+  background-color: #ff3333; /* Darker red on hover */
+}
+
+.add-notes {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.add-notes input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.add-notes input[type="submit"] {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-notes input[type="submit"]:hover {
+  background-color: #45a049;
+}
